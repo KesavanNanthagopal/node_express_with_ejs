@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>This is new page</title>
-    </head>
-    <body>
-        <div>
-            <h1>This is home page</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/new_blog">New blog</a></li>
-            </ul>
-        </nav>
-    </body>
+<%- include('../partials/header.ejs') %>
+<body>
+  <div>
+    <h1>This is home page</h1>
+  </div>
+  <%- include('../partials/nav.ejs') %>
+  <div>
+    <h1>All blogs</h1>
+    <% if(blog.length>0) { %>
+      <% blog.forEach(blog=>{ %>
+        <h1>
+          <%= blog.title %>
+        </h1>
+        <p>
+          <%= blog.description %>
+        </p>
+        <% }) %>
+          <% } %>
+  </div>
+</body>
+
 </html>

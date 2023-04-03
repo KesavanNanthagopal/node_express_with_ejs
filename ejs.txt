@@ -1,0 +1,3 @@
+If we want to render the direct string in the ejs file we want to use the <%=%>
+If we want to render the whole html in the ejs file we want to use the <%- include('path') %>
+If we want to use the condition ,looping and another js code we can use the <% %>
